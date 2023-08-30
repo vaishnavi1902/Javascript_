@@ -10,7 +10,7 @@ function paramPrintmyname(name = "vaishnavi"){
 }
 paramPrintmyname("ishita")
 
-function isloggedin(user){
+function isloggedin(user){ 
     if(!user){
         console.log("please specify username")
         return 
