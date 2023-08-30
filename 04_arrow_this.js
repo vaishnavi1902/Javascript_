@@ -32,5 +32,5 @@ const addtwo = (num1 , num2) => {
 // also be written as 
 const addtwo1 = (num1 , num2) => num1 + num2 
 
-console.log(addtwo(4,5)); // 9
+console.log(addtwo(4,5)); // 9 
 console.log(addtwo1(3,5)); // 8
