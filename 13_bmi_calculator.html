@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>BMI Calculator</h1>
+        <div>
+            <label for="weight">Enter Weight</label>
+            <textarea name="weight" id="weight" cols="30" rows="1"></textarea> <br>
+        </div>
+        <div>
+            <label for="height">Enter height</label>
+            <textarea name="height" id="height" cols="30" rows="1"></textarea>
+        </div>
+        <div>
+            <button class="btn">Calculate</button>
+            <div class="result"></div>
+        </div>
+    </form>
+
+    <script>
+        const form =  document.querySelector("form")
+        form.addEventListener('submit' , function (e) {
+            e.preventDefault()
+            const weight = parseInt(document.getElementById('weight').value);
+            const height = parseInt(document.getElementById('height').value);
+            const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+            document.querySelector(".result").innerHTML = bmi ;
+            console.log(bmi)
+        })
+
+    </script>
+    <style>
+        body{
+            background-color: cyan;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .button{ 
+            width : 100px ;
+            height : 100px ; 
+            border: none;
+        }
+       
+    </style>
+</body>
+</html>
