@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <button id="showtime" class="showtime">Show Current Time</button>
+    </div>
+    <script>
+        const time = document.querySelector(".showtime")
+        // console.log(time)
+        time.addEventListener('click' ,function (e) {
+            setInterval(function () { 
+                let p = new Date();
+                let x = p.toLocaleString();
+                time.innerHTML = x;
+                // console.log(time.innerHTML)
+            },1000)
+        } )
+        
+     
+    </script>
+    <style>
+        body{
+            background-color: #414141;
+        }
+        .parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* align-self: center;
+            align-content: center; */
+            /* width:100px; */
+        }
+        button{
+            background-color: #9de3ff;
+            padding: 20px;
+            border-radius: 6px;
+            border: none;
+        }
+    </style>
+</body>
+</html>
