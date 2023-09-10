@@ -15,7 +15,7 @@ function x(){
     // console.log("X executed");
 }
 x();
-
+// ---------------------------------------------
 function add() {
     a = 7;
     return  () => a + a;
@@ -31,9 +31,9 @@ const counts = ( function () {
         return counter;
     }
 })();
-console.log(counts());
-console.log(counts());
-console.log(counts());
-console.log(counts());
-console.log(counts());
+console.log(counts()); // 1
+console.log(counts()); // 2
+console.log(counts()); // 3
+console.log(counts()); // 4
+console.log(counts()); // 5
 
