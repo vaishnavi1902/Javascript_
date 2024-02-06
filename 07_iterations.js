@@ -52,9 +52,10 @@ for (const num of arr) {
     console.log(num);
 }
 
-const greetings = "Hello world!"
-for (const greet of greetings) {
-    console.log(`Each char is ${greet}`)
+
+const sentense = "me vaishu"
+for (const any of sentense){
+    console.log(`char = ${any}`)
 }
 
 

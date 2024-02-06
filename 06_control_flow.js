@@ -54,7 +54,7 @@ if (loggedInFromGoogle || loggedInFromEmail) {
 }
 
 // switch statement 
-const month = "march"
+const month = "march" 
 
 switch (month) {
     case "jan":
@@ -76,10 +76,10 @@ switch (month) {
 }
 
 // if true then execute
-const userEmail = []
+const userEmail = ["vaishnavi"]
 
 if (userEmail) {
-    console.log("Got user email");
+    console.log(`Got user email ${userEmail}`);
 } else {
     console.log("Don't have user email");
 }
