@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js</title>
+</head>
+<body>
+    <div class="main">
+        <ul class="unordered" id="images">
+            <li class="items" id="child">one</li>
+            <li class="items" id="child">two</li>
+            <li class="items" id="child">three</li>
+            <li class="items" id="child">four</li>
+            <li class="items" id="child">five</li>
+            <li class="items" id="child">six</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('images').addEventListener('click', function (e) {
+            
+            if(e.target.tagName === 'LI'){
+                console.log(e)
+                const child = e.target ;
+                child.remove()
+            }
+        })
+        
+    </script>
+
+    <style>
+        body {
+            background-color: #414141;
+        }
+        .unordered {
+            display: flex;
+        }
+        .items {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+            background-color: #212121;
+            color: aliceblue;
+        }
+    </style>
+</body>
+</html>
