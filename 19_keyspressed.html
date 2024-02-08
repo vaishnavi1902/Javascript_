@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keys pressed</title>
+</head>
+<body>
+    <div class="main" id="main">
+        <h5 class="key">Enter any Key and see the magic :)</h5>
+    </div>
+
+    <script>
+       const main =  document.getElementById('main');
+       window.addEventListener('keydown',(e) => {
+        main.innerHTML = `
+        <div class="color"> 
+            <table>
+            <tr>
+                <th>KEY</th>
+                <th>keycode</th>
+                <th>code</th>
+            </tr>
+            <tr>
+                <td>${e.key === " " ? "space" : e.key}</td>
+                <td>${e.keyCode}</td>
+                <td>${e.code}</td>
+            </tr>
+            </table>
+        </div>
+        `
+       })
+
+    </script>
+
+    <style>
+        body {
+            background-color: #414141;
+            color: aliceblue;
+        }
+        .main {
+            text-align: center;
+            margin: 10%;
+        }
+        table , tr , th , td{
+            padding: 5px;
+            border: 1px solid white;
+        }
+    </style>
+</body>
+</html>
